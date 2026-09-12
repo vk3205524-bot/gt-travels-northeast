@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Northeast Travel Blog - GT Travels</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css?v=9">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo"><img src="images/logo.png" alt="GT Travels" class="nav-logo-img" style="height: 46px; max-height: 46px; width: auto; max-width: 140px; object-fit: contain; display: block;"></a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="destinations.html">Destinations</a>
+        <a href="packages.html">Packages</a>
+        <a href="about.html">About</a>
+        <a href="blog.html" class="active">Blog</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="nav-cta">
+        <a href="tel:+919612946960" class="nav-phone"><i class="fas fa-phone"></i> +91 96129 46960</a>
+        <a href="contact.html" class="btn btn-primary btn-sm">Book Now</a>
+      </div>
+      <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="destinations.html">Destinations</a>
+    <a href="packages.html">Packages</a>
+    <a href="about.html">About</a>
+    <a href="blog.html" class="active">Blog</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn-primary">Book Now</a>
+  </div>
+
+  <!-- Page Hero -->
+  <header class="page-hero" style="background-image: linear-gradient(rgba(10, 22, 40, 0.6), rgba(10, 22, 40, 0.6)), url(images/meghalaya/krang-shuri.jpg);">
+    <div class="container">
+      <h1>Northeast Travel Blog</h1>
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> <i class="fas fa-chevron-right"></i> <span>Blog</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Blog Grid -->
+  <section class="section animate-on-scroll">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem;">
+        
+        <!-- Post 1 -->
+        <article style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); transition: transform 0.3s ease;">
+          <a href="#" style="display: block; overflow: hidden;">
+            <img src="images/meghalaya/double-decker.jpg" alt="Root Bridges" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+          </a>
+          <div style="padding: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; font-size: 0.9rem;">
+              <span style="color: var(--secondary); font-weight: 600;"><i class="fas fa-tag"></i> Adventure</span>
+              <span style="color: #888;"><i class="far fa-calendar-alt"></i> Aug 2024</span>
+            </div>
+            <h3 style="margin-bottom: 1rem; font-size: 1.3rem;"><a href="#" style="color: var(--primary); text-decoration: none;">Living Root Bridges of Meghalaya: A Complete Guide</a></h3>
+            <p style="color: #666; margin-bottom: 1.5rem; line-height: 1.6;">Discover the engineering marvels of the Khasi and Jaintia hills. A deep dive into the history of the root bridges and trekking trails to reach them.</p>
+            <a href="#" style="color: var(--primary); font-weight: 600; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- Post 2 -->
+        <article style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); transition: transform 0.3s ease;">
+          <a href="#" style="display: block; overflow: hidden;">
+            <img src="images/assam/kaziranga-rhino.jpg" alt="Kaziranga Safari" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+          </a>
+          <div style="padding: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; font-size: 0.9rem;">
+              <span style="color: var(--secondary); font-weight: 600;"><i class="fas fa-tag"></i> Wildlife</span>
+              <span style="color: #888;"><i class="far fa-calendar-alt"></i> Jul 2024</span>
+            </div>
+            <h3 style="margin-bottom: 1rem; font-size: 1.3rem;"><a href="#" style="color: var(--primary); text-decoration: none;">Kaziranga National Park: Best Safari Tips</a></h3>
+            <p style="color: #666; margin-bottom: 1.5rem; line-height: 1.6;">A complete guide to spotting the one-horned rhinoceros. Find out the best zones for jeep safaris and timing tips for wildlife photography.</p>
+            <a href="#" style="color: var(--primary); font-weight: 600; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- Post 3 -->
+        <article style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); transition: transform 0.3s ease;">
+          <a href="#" style="display: block; overflow: hidden;">
+            <img src="images/arunachal/tawang-monastery-exterior.jpg" alt="Tawang" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+          </a>
+          <div style="padding: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; font-size: 0.9rem;">
+              <span style="color: var(--secondary); font-weight: 600;"><i class="fas fa-tag"></i> Cultural</span>
+              <span style="color: #888;"><i class="far fa-calendar-alt"></i> Jul 2024</span>
+            </div>
+            <h3 style="margin-bottom: 1rem; font-size: 1.3rem;"><a href="#" style="color: var(--primary); text-decoration: none;">Tawang Monastery: Journey to the Roof of India</a></h3>
+            <p style="color: #666; margin-bottom: 1.5rem; line-height: 1.6;">Explore India's largest monastery perched in Arunachal Pradesh. Includes road trip advice, permits, and crossing the majestic Sela Pass.</p>
+            <a href="#" style="color: var(--primary); font-weight: 600; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- Post 4 -->
+        <article style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); transition: transform 0.3s ease;">
+          <a href="#" style="display: block; overflow: hidden;">
+            <img src="images/nagaland/kisama.jpg" alt="Northeast Food & Culture" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+          </a>
+          <div style="padding: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; font-size: 0.9rem;">
+              <span style="color: var(--secondary); font-weight: 600;"><i class="fas fa-tag"></i> Food</span>
+              <span style="color: #888;"><i class="far fa-calendar-alt"></i> Jun 2024</span>
+            </div>
+            <h3 style="margin-bottom: 1rem; font-size: 1.3rem;"><a href="#" style="color: var(--primary); text-decoration: none;">Top 10 Northeast Indian Foods You Must Try</a></h3>
+            <p style="color: #666; margin-bottom: 1.5rem; line-height: 1.6;">From authentic Naga bamboo shoot pork to the elaborate Assamese thali and Tibetan momos. A culinary guide to the Seven Sisters.</p>
+            <a href="#" style="color: var(--primary); font-weight: 600; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- Post 5 -->
+        <article style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); transition: transform 0.3s ease;">
+          <a href="#" style="display: block; overflow: hidden;">
+            <img src="images/sikkim/gurudongmar-lake.jpg" alt="Seasons" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+          </a>
+          <div style="padding: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; font-size: 0.9rem;">
+              <span style="color: var(--secondary); font-weight: 600;"><i class="fas fa-tag"></i> Guides</span>
+              <span style="color: #888;"><i class="far fa-calendar-alt"></i> Jun 2024</span>
+            </div>
+            <h3 style="margin-bottom: 1rem; font-size: 1.3rem;"><a href="#" style="color: var(--primary); text-decoration: none;">Best Time to Visit Each Northeast State</a></h3>
+            <p style="color: #666; margin-bottom: 1.5rem; line-height: 1.6;">Planning a trip? Learn about the monsoon impacts in Meghalaya versus the best winter snow conditions for Sikkim and Arunachal.</p>
+            <a href="#" style="color: var(--primary); font-weight: 600; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- Post 6 -->
+        <article style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); transition: transform 0.3s ease;">
+          <a href="#" style="display: block; overflow: hidden;">
+            <img src="images/nagaland/kisama.jpg" alt="Hornbill Festival" style="width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+          </a>
+          <div style="padding: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; font-size: 0.9rem;">
+              <span style="color: var(--secondary); font-weight: 600;"><i class="fas fa-tag"></i> Cultural</span>
+              <span style="color: #888;"><i class="far fa-calendar-alt"></i> May 2024</span>
+            </div>
+            <h3 style="margin-bottom: 1rem; font-size: 1.3rem;"><a href="#" style="color: var(--primary); text-decoration: none;">Hornbill Festival: Everything You Need to Know</a></h3>
+            <p style="color: #666; margin-bottom: 1.5rem; line-height: 1.6;">The festival of festivals! Read our guide on visiting Kisama Heritage Village in Nagaland, exact dates, ticketing, and what to expect.</p>
+            <a href="#" style="color: var(--primary); font-weight: 600; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter CTA -->
+  <section class="section animate-on-scroll" style="background-color: var(--primary); color: white; text-align: center;">
+    <div class="container" style="max-width: 600px;">
+      <h2 style="color: white; margin-bottom: 1rem;">Get Northeast Travel Tips in Your Inbox</h2>
+      <p style="margin-bottom: 2rem; opacity: 0.9;">Subscribe to our newsletter for exclusive guides, upcoming tours, and travel inspiration.</p>
+      <form style="display: flex; gap: 1rem; justify-content: center;">
+        <input type="email" placeholder="Your Email Address" style="padding: 1rem; border-radius: 4px; border: none; width: 100%; max-width: 300px; outline: none;">
+        <button type="submit" class="btn btn-primary" style="background-color: var(--secondary); color: var(--primary);">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="index.html" class="nav-logo"><img src="images/logo.png" alt="GT Travels" class="nav-logo-img" style="height: 52px; max-height: 52px; width: auto; max-width: 160px; object-fit: contain; display: block; margin-bottom: 1rem;"></a>
+          <p>Creating unforgettable travel experiences across India since 2015. Your trusted partner for personalized journeys, cultural immersion, and adventure.</p>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="packages.html">Tour Packages</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="blog.html">Travel Blog</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Top Destinations</h4>
+          <ul>
+            <li><a href="packages.html">Meghalaya</a></li>
+            <li><a href="packages.html">Sikkim</a></li>
+            <li><a href="packages.html">Arunachal Pradesh</a></li>
+            <li><a href="packages.html">Assam</a></li>
+            <li><a href="packages.html">Nagaland</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Contact Info</h4>
+          <ul class="footer-contact">
+            <li><i class="fas fa-map-marker-alt"></i><span>Jail Road, Near Subash Chandra Bose,<br>Shillong, Meghalaya 793001</span></li>
+            <li><i class="fas fa-phone"></i><span>+91 96129 46960</span></li>
+            <li><i class="fas fa-envelope"></i><span>gttravels12345@gmail.com</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 GT Travels. All Rights Reserved.</p>
+        <p>Made with <i class="fas fa-heart" style="color: var(--secondary);"></i> in India</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <div class="whatsapp-float">
+    <div class="whatsapp-pulse"></div>
+    <a href="https://wa.me/919612946960?text=Hi! I'm interested in your tour packages." target="_blank">
+      <i class="fab fa-whatsapp"></i>
+      <span>Chat with us</span>
+    </a>
+  </div>
+
+  <!-- Scroll to Top -->
+  <div class="scroll-top" onclick="scrollToTop()">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <!-- Page Loader -->
+  <div class="page-loader">
+    <div class="loader-spinner"></div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+<script src="js/forms.js"></script>
+</body>
+</html>

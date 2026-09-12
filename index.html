@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GT Travels | Northeast India Specialists</title>
+    <meta name="description" content="Discover the unexplored Northeast India with GT Travels. Your trusted partner for personalized journeys, cultural immersion, and adventure in Meghalaya, Sikkim, Arunachal Pradesh, Assam, Nagaland, and more.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css?v=12">
+    <style>
+        .destinations-grid {
+            display: grid !important;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)) !important;
+            gap: 1.75rem !important;
+        }
+        .destination-card {
+            height: auto !important;
+            min-height: 420px !important;
+            max-height: none !important;
+            display: flex !important;
+            flex-direction: column !important;
+            background: #ffffff !important;
+            border-radius: 16px !important;
+            overflow: hidden !important;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08) !important;
+            border: 1px solid rgba(0,0,0,0.06) !important;
+        }
+        .destination-img {
+            height: 220px !important;
+            min-height: 220px !important;
+            max-height: 220px !important;
+            width: 100% !important;
+            position: relative !important;
+            overflow: hidden !important;
+            background: #0a1628 !important;
+            flex-shrink: 0 !important;
+        }
+        .destination-img img {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+            display: block !important;
+        }
+        .destination-content {
+            padding: 1.5rem !important;
+            display: flex !important;
+            flex-direction: column !important;
+            flex: 1 !important;
+            background: #ffffff !important;
+        }
+        .destination-content h3 {
+            font-size: 1.45rem !important;
+            font-weight: 700 !important;
+            color: #0a1628 !important;
+            margin-bottom: 0.35rem !important;
+        }
+        .destination-desc {
+            font-size: 0.88rem !important;
+            color: #64748b !important;
+            margin-bottom: 0.65rem !important;
+        }
+        .destination-location {
+            font-size: 0.82rem !important;
+            color: #475569 !important;
+            display: flex !important;
+            align-items: center !important;
+            gap: 0.4rem !important;
+            margin-bottom: 1.25rem !important;
+        }
+        .destination-footer {
+            margin-top: auto !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: space-between !important;
+            padding-top: 1rem !important;
+            border-top: 1px solid #f1f5f9 !important;
+        }
+        @media (max-width: 680px) {
+            .destinations-grid {
+                grid-template-columns: 1fr !important;
+                gap: 1.25rem !important;
+            }
+            .destination-card {
+                min-height: unset !important;
+            }
+            .destination-img {
+                height: 200px !important;
+                min-height: 200px !important;
+                max-height: 200px !important;
+            }
+            .destination-content {
+                padding: 1.25rem 1rem !important;
+            }
+            .destination-content h3 {
+                font-size: 1.3rem !important;
+            }
+        }
+        @media (max-width: 360px) {
+            .destination-img {
+                height: 175px !important;
+                min-height: 175px !important;
+                max-height: 175px !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Page Loader -->
+    <div class="page-loader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-logo"><img src="images/logo.png" alt="GT Travels" class="nav-logo-img" style="height: 46px; max-height: 46px; width: auto; max-width: 140px; object-fit: contain; display: block;"></a>
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="destinations.html">Destinations</a>
+                <a href="packages.html">Packages</a>
+                <a href="about.html">About</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="nav-cta">
+                <a href="tel:+919612946960" class="nav-phone"><i class="fas fa-phone"></i> +91 96129 46960</a>
+                <a href="contact.html" class="btn btn-primary btn-sm">Book Now</a>
+            </div>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+    <div class="mobile-menu">
+        <a href="index.html" class="active">Home</a>
+        <a href="destinations.html">Destinations</a>
+        <a href="packages.html">Packages</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="btn btn-primary">Book Now</a>
+    </div>
+
+    <!-- Hero Section with Background Video -->
+    <section class="hero">
+        <video class="hero-video" autoplay muted loop playsinline poster="images/hero-poster.jpg">
+            <source src="videos/root-bridge-hero.mp4" type="video/mp4">
+            <source src="hero section/Creating_travel_video_of_root_20260911000620.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-particles" id="particles-js"></div>
+        <div class="container hero-content animate-on-scroll">
+            <div class="hero-badge">✦ NORTHEAST INDIA SPECIALISTS</div>
+            <h1 class="hero-title">Discover the <span class="highlight">Unexplored Northeast</span></h1>
+            <p class="hero-subtitle">Embark on a journey through India's best-kept secret — pristine waterfalls, living root bridges, ancient monasteries, vibrant tribal cultures, and breathtaking mountain landscapes.</p>
+            <div class="hero-buttons">
+                <a href="packages.html" class="btn btn-primary btn-lg">Explore Packages</a>
+                <a href="about.html" class="btn btn-outline-white btn-lg"><i class="fas fa-play" style="font-size: 0.8rem; margin-right: 4px;"></i> Watch Our Story</a>
+            </div>
+            <div class="hero-search-wrapper">
+                <form action="destinations.html" method="get">
+                    <div class="searchbar">
+                        <input type="text" name="search" placeholder="Search...">
+                        <span class="searchbar-icon" onclick="this.closest('form').submit()"><i class="fas fa-search"></i></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Stats Bar (Compact) -->
+    <section class="stats-section animate-on-scroll">
+        <div class="container">
+            <div class="stats-grid stagger-children">
+                <div class="stat-card">
+                    <div class="stat-icon-wrap"><i class="fas fa-users"></i></div>
+                    <div class="stat-info">
+                        <span class="stat-number" data-target="500" data-suffix="+">0+</span>
+                        <span class="stat-label">Happy Travelers</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon-wrap"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="stat-info">
+                        <span class="stat-number" data-target="30" data-suffix="+">0+</span>
+                        <span class="stat-label">NE Destinations</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon-wrap"><i class="fas fa-suitcase-rolling"></i></div>
+                    <div class="stat-info">
+                        <span class="stat-number" data-target="50" data-suffix="+">0+</span>
+                        <span class="stat-label">Tour Packages</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon-wrap"><i class="fas fa-award"></i></div>
+                    <div class="stat-info">
+                        <span class="stat-number" data-target="8" data-suffix="+">0+</span>
+                        <span class="stat-label">Years in Northeast</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Destinations -->
+    <section class="destinations-section section animate-on-scroll">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-label">EXPLORE THE NORTHEAST</span>
+                <h2 class="section-title">Most Popular Northeast Destinations</h2>
+            </div>
+            <div class="destinations-grid stagger-children">
+                <!-- Meghalaya -->
+                <div class="destination-card">
+                    <div class="destination-img">
+                        <img src="images/meghalaya/double-decker.jpg" alt="Double Decker Living Root Bridge, Meghalaya">
+                        <div class="destination-meta">
+                            <span><i class="far fa-clock"></i> 5-7 Days</span>
+                            <span><i class="fas fa-star"></i> 4.9★</span>
+                        </div>
+                    </div>
+                    <div class="destination-content">
+                        <h3>Meghalaya</h3>
+                        <p class="destination-desc">The Abode of Clouds • 35+ Attractions</p>
+                        <div class="destination-location">
+                            <i class="fas fa-map-marker-alt"></i> Shillong, Sohra, Dawki, Jaintia & Garo
+                        </div>
+                        <div class="destination-footer">
+                            <div class="destination-price">
+                                <small>Explore</small>
+                                <strong>35+ Places</strong>
+                            </div>
+                            <a href="destinations.html#meghalaya" class="btn btn-primary btn-sm">View All Places</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Sikkim -->
+                <div class="destination-card">
+                    <div class="destination-img">
+                        <img src="images/sikkim/gurudongmar-lake.jpg" alt="Sikkim">
+                        <div class="destination-meta">
+                            <span><i class="far fa-clock"></i> 3-7 Days</span>
+                            <span><i class="fas fa-star"></i> 4.9★</span>
+                        </div>
+                    </div>
+                    <div class="destination-content">
+                        <h3>Sikkim</h3>
+                        <p class="destination-desc">Mountain Kingdom • 22+ Attractions</p>
+                        <div class="destination-location">
+                            <i class="fas fa-map-marker-alt"></i> Gangtok, Gurudongmar, Yumthang, Pelling
+                        </div>
+                        <div class="destination-footer">
+                            <div class="destination-price">
+                                <small>Explore</small>
+                                <strong>22+ Places</strong>
+                            </div>
+                            <a href="destinations.html#sikkim" class="btn btn-primary btn-sm">View All Places</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Arunachal Pradesh -->
+                <div class="destination-card">
+                    <div class="destination-img">
+                        <img src="images/arunachal/tawang-monastery-exterior.jpg" alt="Tawang Monastery, Arunachal Pradesh">
+                        <div class="destination-meta">
+                            <span><i class="far fa-clock"></i> 4-7 Days</span>
+                            <span><i class="fas fa-star"></i> 4.8★</span>
+                        </div>
+                    </div>
+                    <div class="destination-content">
+                        <h3>Arunachal Pradesh</h3>
+                        <p class="destination-desc">Land of the Rising Sun • 20+ Attractions</p>
+                        <div class="destination-location">
+                            <i class="fas fa-map-marker-alt"></i> Tawang, Ziro, Mechuka, Namsai
+                        </div>
+                        <div class="destination-footer">
+                            <div class="destination-price">
+                                <small>Explore</small>
+                                <strong>20+ Places</strong>
+                            </div>
+                            <a href="destinations.html#arunachal" class="btn btn-primary btn-sm">View All Places</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Assam -->
+                <div class="destination-card">
+                    <div class="destination-img">
+                        <img src="images/assam/kaziranga-rhino-card.jpg?v=2" alt="One-Horned Rhino in Kaziranga, Assam">
+                        <div class="destination-meta">
+                            <span><i class="far fa-clock"></i> 3-7 Days</span>
+                            <span><i class="fas fa-star"></i> 4.9★</span>
+                        </div>
+                    </div>
+                    <div class="destination-content">
+                        <h3>Assam</h3>
+                        <p class="destination-desc">Gateway to the Northeast • 21+ Attractions</p>
+                        <div class="destination-location">
+                            <i class="fas fa-map-marker-alt"></i> Kaziranga, Majuli, Kamakhya, Haflong
+                        </div>
+                        <div class="destination-footer">
+                            <div class="destination-price">
+                                <small>Explore</small>
+                                <strong>21+ Places</strong>
+                            </div>
+                            <a href="destinations.html#assam" class="btn btn-primary btn-sm">View All Places</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Nagaland -->
+                <div class="destination-card">
+                    <div class="destination-img">
+                        <img src="images/nagaland/dzukou-valley.jpg" alt="Dzükou Valley, Nagaland">
+                        <div class="destination-meta">
+                            <span><i class="far fa-clock"></i> 3-5 Days</span>
+                            <span><i class="fas fa-star"></i> 4.9★</span>
+                        </div>
+                    </div>
+                    <div class="destination-content">
+                        <h3>Nagaland</h3>
+                        <p class="destination-desc">Land of Festivals • 18+ Attractions</p>
+                        <div class="destination-location">
+                            <i class="fas fa-map-marker-alt"></i> Kohima, Dzükou, Mon, Mokokchung
+                        </div>
+                        <div class="destination-footer">
+                            <div class="destination-price">
+                                <small>Explore</small>
+                                <strong>18+ Places</strong>
+                            </div>
+                            <a href="destinations.html#nagaland" class="btn btn-primary btn-sm">View All Places</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Manipur -->
+                <div class="destination-card">
+                    <div class="destination-img">
+                        <img src="images/manipur/loktak-lake.jpg" alt="Manipur">
+                        <div class="destination-meta">
+                            <span><i class="far fa-clock"></i> 2-5 Days</span>
+                            <span><i class="fas fa-star"></i> 4.8★</span>
+                        </div>
+                    </div>
+                    <div class="destination-content">
+                        <h3>Manipur</h3>
+                        <p class="destination-desc">Jewel of India • 18+ Attractions</p>
+                        <div class="destination-location">
+                            <i class="fas fa-map-marker-alt"></i> Loktak Lake, Imphal, Ukhrul, Moreh
+                        </div>
+                        <div class="destination-footer">
+                            <div class="destination-price">
+                                <small>Explore</small>
+                                <strong>18+ Places</strong>
+                            </div>
+                            <a href="destinations.html#manipur" class="btn btn-primary btn-sm">View All Places</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Mizoram -->
+                <div class="destination-card">
+                    <div class="destination-img">
+                        <img src="images/mizoram/tuirihiau-falls.jpg" alt="Tuirihiau Falls, Mizoram">
+                        <div class="destination-meta">
+                            <span><i class="far fa-clock"></i> 3-5 Days</span>
+                            <span><i class="fas fa-star"></i> 4.8★</span>
+                        </div>
+                    </div>
+                    <div class="destination-content">
+                        <h3>Mizoram</h3>
+                        <p class="destination-desc">Blue Mountains & Waterfalls • 20+ Attractions</p>
+                        <div class="destination-location">
+                            <i class="fas fa-map-marker-alt"></i> Aizawl, Thenzawl, Champhai, Phawngpui
+                        </div>
+                        <div class="destination-footer">
+                            <div class="destination-price">
+                                <small>Explore</small>
+                                <strong>20+ Places</strong>
+                            </div>
+                            <a href="destinations.html#mizoram" class="btn btn-primary btn-sm">View All Places</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tripura -->
+                <div class="destination-card">
+                    <div class="destination-img">
+                        <img src="images/tripura/neermahal-lake.jpg" alt="Neermahal Water Palace, Tripura">
+                        <div class="destination-meta">
+                            <span><i class="far fa-clock"></i> 2-4 Days</span>
+                            <span><i class="fas fa-star"></i> 4.8★</span>
+                        </div>
+                    </div>
+                    <div class="destination-content">
+                        <h3>Tripura</h3>
+                        <p class="destination-desc">Water Palaces & Ancient Sculptures • 18+ Attractions</p>
+                        <div class="destination-location">
+                            <i class="fas fa-map-marker-alt"></i> Agartala, Neermahal, Unakoti, Udaipur
+                        </div>
+                        <div class="destination-footer">
+                            <div class="destination-price">
+                                <small>Explore</small>
+                                <strong>18+ Places</strong>
+                            </div>
+                            <a href="destinations.html#tripura" class="btn btn-primary btn-sm">View All Places</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meghalaya 4 Main Tour Circuits Spotlight -->
+    <section class="section" id="meghalaya-circuits" style="background: #f8fafc; padding: 4rem 0;">
+        <div class="container">
+            <div class="section-header text-center" style="margin-bottom: 2.5rem;">
+                <span class="hero-badge" style="margin-bottom: 0.5rem; display: inline-block;">✦ GT TRAVELS MEGHALAYA PACKAGES</span>
+                <h2 class="section-title">Meghalaya 4 Core Tour Circuits</h2>
+                <p style="max-width: 750px; margin: 0.5rem auto 0; color: #475569; font-size: 1.05rem;">Sanitized private cabs & customized sightseeing tours across Meghalaya with GT Travels Shillong. Explore our 4 main circuits:</p>
+            </div>
+
+            <div class="circuits-container">
+
+              <!-- 1. Shillong Local Sightseeing (1 Day) -->
+              <div class="circuit-card">
+                <div class="circuit-header">
+                  <div>
+                    <span class="circuit-duration-badge"><i class="far fa-clock"></i> 1 Day Cab Tour</span>
+                    <h3 class="circuit-title">Shillong Local Sightseeing (1 Day)</h3>
+                    <div class="circuit-route">
+                      <i class="fas fa-route"></i>
+                      <span>Umiam Lake + Ward’s Lake + Cathedral + Don Bosco + Elephant Falls + Laitlum Canyons</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="circuit-places-label"><i class="fas fa-camera"></i> Attractions Covered (Exact Places with Photos):</div>
+                <div class="circuit-places-grid">
+                  <div class="circuit-place-item">
+                    <img src="images/meghalaya/umiam-lake.jpg" alt="Umiam Lake">
+                    <div class="circuit-place-name">Umiam Lake</div>
+                  </div>
+                  <div class="circuit-place-item">
+                    <img src="images/meghalaya/wards-lake.jpg" alt="Ward's Lake">
+                    <div class="circuit-place-name">Ward’s Lake</div>
+                  </div>
+                  <div class="circuit-place-item">
+                    <img src="images/meghalaya/cathedral-shillong.jpg" alt="Cathedral">
+                    <div class="circuit-place-name">Cathedral</div>
+                  </div>
+                  <div class="circuit-place-item">
+                    <img src="images/meghalaya/don-bosco.jpg" alt="Don Bosco Museum">
+                    <div class="circuit-place-name">Don Bosco</div>
+                  </div>
+                  <div class="circuit-place-item">
+                    <img src="images/meghalaya/elephant-falls.jpg" alt="Elephant Falls">
+                    <div class="circuit-place-name">Elephant Falls</div>
+                  </div>
+                  <div class="circuit-place-item">
+                    <img src="images/meghalaya/laitlum-canyons.jpg" alt="Laitlum Canyons">
+                    <div class="circuit-place-name">Laitlum Canyons</div>
+                  </div>
+                </div>
+
+                <div class="circuit-footer">
+                  <div class="circuit-fleet-info">
+                    <i class="fas fa-car-side"></i>
+                    <span>Cars: <strong>Swift Dzire / Baleno / Fronx / Etios</strong> (4 Seater) &bull; <strong>Innova / Crysta / Ertiga / XL6</strong> (7 Seater)</span>
+                  </div>
+                  <div class="circuit-actions">
+                    <a href="https://wa.me/919612946960?text=Hi%20GT%20Travels!%20I%20want%20to%20book%20the%20Shillong%20Local%20Sightseeing%20(1%20Day)%20cab%20tour." target="_blank" class="circuit-btn-book">
+                      <i class="fab fa-whatsapp"></i> Book This Cab Tour
+                    </a>
+                    <a href="tel:+919612946960" class="circuit-btn-call">
+                      <i class="fas fa-phone"></i> Call 96129 46960
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 2. Cherrapunji / Sohra Circuit (1-2 Days) -->
+              <div class="circuit-card">
+                <div class="circuit-header">
+                  <div>
+                    <span class="circuit-duration-badge"><i class="far fa-clock"></i> 1-2 Days Tour</span>
+                    <h3 class="circuit-title">Cherrapunji / Sohra Circuit (1-2 Days)</h3>
+                    <div class="circuit-route">
+                      <i class="fas fa-route"></i>
+                      <span>Dainthlen + Wei Sawdong + Arwah Cave + Nohkalikai + Mawsmai + Seven Sisters + Nongriat Trek</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="circuit-places-label"><i class="fas fa-camera"></i> Attractions Covered (Exact Places with Photos):</div>
+                <div class="circuit-places-grid">
+                  <div class="circuit-place-item">
+                    <img src="images/meghalaya/dainthlen.jpg" alt="Dainthlen Falls">
+                    <div class="circuit-place-name">Dainthlen</div>
+                  </div>
+                  <div class="circuit-place-item">
+                    <img src="images/meghalaya/wei-sawdong.jpg" alt="Wei Sawdong Falls">
+                    <div class="circuit-place-name">Wei Sawdong</div>
+                  </div>
+                  <div class="circuit-place-item">
+                    <img src="images/meghalaya/arwah-cave.jpg" alt="Arwah Cave">
+                    <div class="circuit-place-name">Arwah Cave</div>
+                  </div>
+                  <div class="circuit-place-item">
+                    <img src="images/meghalaya/nohkalikai.jpg" alt="Nohkalikai Falls">
+                    <div class="circuit-place-name">Nohkalikai</div>
+                  </div>
+                  <div class="circuit-place-item">
+                    <img src="images/meghalaya/mawsmai-cave.jpg" alt="Mawsmai Cave">
+                    <div class="circuit-place-name">Mawsmai</div>
+                  </div>
+                  <div class="circuit-place-item">
+                    <img src="images/meghalaya/seven-sisters.jpg" alt="Seven Sisters Falls">
+                    <div class="circuit-place-name">Seven Sisters</div>
+                  </div>
+                  <div class="circuit-place-item">
+                    <img src="images/meghalaya/double-decker.jpg" alt="Nongriat Living Root Bridge">
+                    <div class="circuit-place-name">Nongriat Trek</div>
+                  </div>
+                </div>
+
+                <div class="circuit-footer">
+                  <div class="circuit-fleet-info">
+                    <i class="fas fa-car-side"></i>
+                    <span>Cars: <strong>Swift Dzire / Baleno / Fronx / Etios</strong> (4 Seater) &bull; <strong>Innova / Crysta / Ertiga / XL6</strong> (7 Seater)</span>
+                  </div>
+                  <div class="circuit-actions">
+                    <a href="https://wa.me/919612946960?text=Hi%20GT%20Travels!%20I%20want%20to%20book%20the%20Cherrapunji%20/%20Sohra%20Circuit%20(1-2%20Days)%20cab%20tour." target="_blank" class="circuit-btn-book">
+                      <i class="fab fa-whatsapp"></i> Book This Cab Tour
+                    </a>
+                    <a href="tel:+919612946960" class="circuit-btn-call">
+                      <i class="fas fa-phone"></i> Call 96129 46960
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 3. Dawki & Border Circuit (1-2 Days) -->
+              <div class="circuit-card">
+                <div class="circuit-header">
+                  <div>
+                    <span class="circuit-duration-badge"><i class="far fa-clock"></i> 1-2 Days Tour</span>
+                    <h3 class="circuit-title">Dawki & Border Circuit (1-2 Days)</h3>
+                    <div class="circuit-route">
+                      <i class="fas fa-route"></i>
+                      <span>Mawlynnong (Cleanest Village) + Riwai Root Bridge + Umngot River (Dawki) + Shnongpdeng Camping + Krang Shuri</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="circuit-places-label"><i class="fas fa-camera"></i> Attractions Covered (Exact Places with Photos):</div>
+                <div class="circuit-places-grid">
+                  <div class="circuit-place-item">
+                    <img src="images/meghalaya/mawlynnong.jpg" alt="Mawlynnong Cleanest Village">
+                    <div class="circuit-place-name">Mawlynnong</div>
+                  </div>
+                  <div class="circuit-place-item">
+                    <img src="images/meghalaya/riwai-root-bridge.jpg" alt="Riwai Root Bridge">
+                    <div class="circuit-place-name">Riwai Root Bridge</div>
+                  </div>
+                  <div class="circuit-place-item">
+                    <img src="images/meghalaya/dawki-umngot.jpg" alt="Umngot River Dawki">
+                    <div class="circuit-place-name">Umngot River (Dawki)</div>
+                  </div>
+                  <div class="circuit-place-item">
+                    <img src="images/meghalaya/shnongpdeng.jpg" alt="Shnongpdeng Camping">
+                    <div class="circuit-place-name">Shnongpdeng Camping</div>
+                  </div>
+                  <div class="circuit-place-item">
+                    <img src="images/meghalaya/krang-shuri.jpg" alt="Krang Shuri Falls">
+                    <div class="circuit-place-name">Krang Shuri</div>
+                  </div>
+                </div>
+
+                <div class="circuit-footer">
+                  <div class="circuit-fleet-info">
+                    <i class="fas fa-car-side"></i>
+                    <span>Cars: <strong>Swift Dzire / Baleno / Fronx / Etios</strong> (4 Seater) &bull; <strong>Innova / Crysta / Ertiga / XL6</strong> (7 Seater)</span>
+                  </div>
+                  <div class="circuit-actions">
+                    <a href="https://wa.me/919612946960?text=Hi%20GT%20Travels!%20I%20want%20to%20book%20the%20Dawki%20&%20Border%20Circuit%20(1-2%20Days)%20cab%20tour." target="_blank" class="circuit-btn-book">
+                      <i class="fab fa-whatsapp"></i> Book This Cab Tour
+                    </a>
+                    <a href="tel:+919612946960" class="circuit-btn-call">
+                      <i class="fas fa-phone"></i> Call 96129 46960
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 4. Adventure / Offbeat (2-3 Days) -->
+              <div class="circuit-card">
+                <div class="circuit-header">
+                  <div>
+                    <span class="circuit-duration-badge"><i class="far fa-clock"></i> 2-3 Days Adventure</span>
+                    <h3 class="circuit-title">Adventure / Offbeat (2-3 Days)</h3>
+                    <div class="circuit-route">
+                      <i class="fas fa-route"></i>
+                      <span>Wari Chora Canyon (Garo Hills) or Nongkhnum River Island + Phe Phe Falls + Nartiang</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="circuit-places-label"><i class="fas fa-camera"></i> Attractions Covered (Exact Places with Photos):</div>
+                <div class="circuit-places-grid">
+                  <div class="circuit-place-item">
+                    <img src="images/meghalaya/wari-chora.jpg" alt="Wari Chora Canyon">
+                    <div class="circuit-place-name">Wari Chora Canyon</div>
+                  </div>
+                  <div class="circuit-place-item">
+                    <img src="images/meghalaya/nongkhnum-island.jpg" alt="Nongkhnum River Island">
+                    <div class="circuit-place-name">Nongkhnum Island</div>
+                  </div>
+                  <div class="circuit-place-item">
+                    <img src="images/meghalaya/phe-phe-falls.jpg" alt="Phe Phe Falls">
+                    <div class="circuit-place-name">Phe Phe Falls</div>
+                  </div>
+                  <div class="circuit-place-item">
+                    <img src="images/meghalaya/nartiang-monoliths.jpg" alt="Nartiang Monoliths">
+                    <div class="circuit-place-name">Nartiang Monoliths</div>
+                  </div>
+                </div>
+
+                <div class="circuit-footer">
+                  <div class="circuit-fleet-info">
+                    <i class="fas fa-car-side"></i>
+                    <span>Cars: <strong>Swift Dzire / Baleno / Fronx / Etios</strong> (4 Seater) &bull; <strong>Innova / Crysta / Ertiga / XL6</strong> (7 Seater)</span>
+                  </div>
+                  <div class="circuit-actions">
+                    <a href="https://wa.me/919612946960?text=Hi%20GT%20Travels!%20I%20want%20to%20book%20the%20Adventure%20/%20Offbeat%20(2-3%20Days)%20cab%20tour." target="_blank" class="circuit-btn-book">
+                      <i class="fab fa-whatsapp"></i> Book This Cab Tour
+                    </a>
+                    <a href="tel:+919612946960" class="circuit-btn-call">
+                      <i class="fas fa-phone"></i> Call 96129 46960
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Packages -->
+    <section class="packages-section section section-alt animate-on-scroll">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-label">TOP PACKAGES</span>
+                <h2 class="section-title">Handpicked Northeast Tours</h2>
+            </div>
+            <div class="packages-grid stagger-children">
+                <!-- Package 1 -->
+                <div class="package-card">
+                    <div class="package-badge">Bestseller</div>
+                    <div class="package-img">
+                        <img src="images/meghalaya/krang-shuri.jpg" alt="Krang Shuri Falls, Meghalaya">
+                    </div>
+                    <div class="package-content">
+                        <div class="package-duration"><i class="far fa-clock"></i> 6 Days</div>
+                        <h3>Meghalaya Explorer</h3>
+                        <p class="package-price" style="color: var(--secondary-dark); font-weight: 600; font-size: 0.9rem;"><i class="fas fa-check-circle" style="color: #28a745;"></i> Guided Tour & Cab Included</p>
+                        <a href="packages.html" class="btn btn-primary btn-block">View Details</a>
+                    </div>
+                </div>
+                <!-- Package 2 -->
+                <div class="package-card">
+                    <div class="package-badge package-badge-premium" style="background: var(--secondary); color: var(--primary);">Premium</div>
+                    <div class="package-img">
+                        <img src="images/arunachal/sela-pass.jpg" alt="Sela Pass, Arunachal Pradesh">
+                    </div>
+                    <div class="package-content">
+                        <div class="package-duration"><i class="far fa-clock"></i> 14 Days</div>
+                        <h3>Complete Northeast Circuit</h3>
+                        <p class="package-price" style="color: var(--secondary-dark); font-weight: 600; font-size: 0.9rem;"><i class="fas fa-check-circle" style="color: #28a745;"></i> All-Inclusive Circuit</p>
+                        <a href="packages.html" class="btn btn-primary btn-block">View Details</a>
+                    </div>
+                </div>
+                <!-- Package 3 -->
+                <div class="package-card">
+                    <div class="package-badge">Popular</div>
+                    <div class="package-img">
+                        <img src="images/sikkim/gurudongmar-lake.jpg" alt="Gurudongmar Lake, Sikkim">
+                    </div>
+                    <div class="package-content">
+                        <div class="package-duration"><i class="far fa-clock"></i> 7 Days</div>
+                        <h3>Sikkim & Gangtok Delight</h3>
+                        <p class="package-price" style="color: var(--secondary-dark); font-weight: 600; font-size: 0.9rem;"><i class="fas fa-check-circle" style="color: #28a745;"></i> Scenic Glacial Tour</p>
+                        <a href="packages.html" class="btn btn-primary btn-block">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="features-section section animate-on-scroll">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-label">WHY CHOOSE US</span>
+                <h2 class="section-title">Your Northeast Journey Trusted in Local Hands</h2>
+            </div>
+            <div class="features-grid stagger-children">
+                <div class="feature-card text-center">
+                    <div class="feature-icon"><i class="fas fa-mountain"></i></div>
+                    <h3>Northeast Experts</h3>
+                    <p>Born and raised in the Northeast — we know every hidden trail, local secret, and off-beat destination.</p>
+                </div>
+                <div class="feature-card text-center">
+                    <div class="feature-icon"><i class="fas fa-home"></i></div>
+                    <h3>Tribal Homestays</h3>
+                    <p>Stay with local families, experience authentic tribal culture, food, and traditions first-hand.</p>
+                </div>
+                <div class="feature-card text-center">
+                    <div class="feature-icon"><i class="fas fa-headset"></i></div>
+                    <h3>24/7 On-Ground Support</h3>
+                    <p>Our local team is always just a call away, ensuring your safety and comfort throughout.</p>
+                </div>
+                <div class="feature-card text-center">
+                    <div class="feature-icon"><i class="fas fa-leaf"></i></div>
+                    <h3>Sustainable Tourism</h3>
+                    <p>We practice responsible travel — supporting local communities and preserving the region's natural beauty.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Fleet -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-label">OUR FLEET</span>
+                <h2>Travel in Comfort & Style</h2>
+                <p>Choose from our well-maintained fleet of vehicles for a smooth and comfortable journey across the Northeast.</p>
+            </div>
+            <div class="grid grid-2 stagger-children" style="gap: 2rem;">
+                <!-- 7 Seater -->
+                <div class="feature-card animate-on-scroll" style="text-align: left;">
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                        <div class="feature-card-icon" style="margin: 0; min-width: 72px;">
+                            <i class="fas fa-van-shuttle"></i>
+                        </div>
+                        <div>
+                            <h4 style="margin-bottom: 0.15rem;">7 Seater Vehicles</h4>
+                            <p style="color: var(--secondary); font-size: 0.85rem; font-weight: 600;">Perfect for families & groups</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                        <span class="filter-tag active" style="cursor: default;">Innova</span>
+                        <span class="filter-tag active" style="cursor: default;">Innova Crysta</span>
+                        <span class="filter-tag active" style="cursor: default;">Ertiga</span>
+                        <span class="filter-tag active" style="cursor: default;">XL6</span>
+                    </div>
+                </div>
+                <!-- 4 Seater -->
+                <div class="feature-card animate-on-scroll" style="text-align: left;">
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                        <div class="feature-card-icon" style="margin: 0; min-width: 72px;">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <div>
+                            <h4 style="margin-bottom: 0.15rem;">4 Seater Vehicles</h4>
+                            <p style="color: var(--secondary); font-size: 0.85rem; font-weight: 600;">Ideal for couples & small groups</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                        <span class="filter-tag active" style="cursor: default;">Baleno</span>
+                        <span class="filter-tag active" style="cursor: default;">Swift Dzire</span>
+                        <span class="filter-tag active" style="cursor: default;">Fronx</span>
+                        <span class="filter-tag active" style="cursor: default;">Brezza</span>
+                        <span class="filter-tag active" style="cursor: default;">Venue</span>
+                        <span class="filter-tag active" style="cursor: default;">Etos</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials-section section section-dark animate-on-scroll">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-label">TESTIMONIALS</span>
+                <h2 class="section-title">What Our Travelers Say</h2>
+            </div>
+            <div class="testimonials-grid stagger-children">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Our trip to Meghalaya was absolutely magical! The living root bridges were surreal..."</p>
+                    <div class="testimonial-author">
+                        <img src="https://i.pravatar.cc/100?img=12" alt="Priya Sharma">
+                        <div>
+                            <h4>Priya Sharma</h4>
+                            <span>Delhi</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Kaziranga safari was a dream come true. Saw 3 rhinos up close! The team's planning was flawless."</p>
+                    <div class="testimonial-author">
+                        <img src="https://i.pravatar.cc/100?img=33" alt="Rahul Mehta">
+                        <div>
+                            <h4>Rahul Mehta</h4>
+                            <span>Mumbai</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Tawang monastery left us speechless. The drive through Sela Pass with snow everywhere was the highlight of our lives."</p>
+                    <div class="testimonial-author">
+                        <img src="https://i.pravatar.cc/100?img=25" alt="Sneha & Vikram">
+                        <div>
+                            <h4>Sneha & Vikram</h4>
+                            <span>Bangalore</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"The Hornbill Festival in Nagaland was an experience like no other. Such vibrant culture!"</p>
+                    <div class="testimonial-author">
+                        <img src="https://i.pravatar.cc/100?img=53" alt="Amit Joshi">
+                        <div>
+                            <h4>Amit Joshi</h4>
+                            <span>Pune</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Travel Gallery -->
+    <section class="gallery-section section animate-on-scroll">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-label">GALLERY</span>
+                <h2 class="section-title">Glimpses of the Northeast</h2>
+            </div>
+            <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.25rem;">
+                <div class="gallery-item" style="position: relative; border-radius: 10px; overflow: hidden; height: 240px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                    <img src="images/meghalaya/double-decker.jpg" alt="Double Decker Living Root Bridge, Meghalaya" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                    <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 0.75rem 1rem; background: linear-gradient(transparent, rgba(10,22,40,0.85)); color: white; font-weight: 600; font-size: 0.95rem;">
+                        Living Root Bridge, Meghalaya
+                    </div>
+                </div>
+                <div class="gallery-item" style="position: relative; border-radius: 10px; overflow: hidden; height: 240px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                    <img src="images/sikkim/gurudongmar-lake.jpg" alt="Gurudongmar Lake, Sikkim" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                    <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 0.75rem 1rem; background: linear-gradient(transparent, rgba(10,22,40,0.85)); color: white; font-weight: 600; font-size: 0.95rem;">
+                        Gurudongmar Lake, Sikkim
+                    </div>
+                </div>
+                <div class="gallery-item" style="position: relative; border-radius: 10px; overflow: hidden; height: 240px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                    <img src="images/arunachal/sela-pass.jpg" alt="Sela Pass & Lake, Arunachal Pradesh" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                    <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 0.75rem 1rem; background: linear-gradient(transparent, rgba(10,22,40,0.85)); color: white; font-weight: 600; font-size: 0.95rem;">
+                        Sela Pass, Arunachal
+                    </div>
+                </div>
+                <div class="gallery-item" style="position: relative; border-radius: 10px; overflow: hidden; height: 240px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                    <img src="images/assam/kaziranga-rhino.jpg" alt="One-Horned Rhino, Kaziranga Assam" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                    <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 0.75rem 1rem; background: linear-gradient(transparent, rgba(10,22,40,0.85)); color: white; font-weight: 600; font-size: 0.95rem;">
+                        Kaziranga Rhino Safari, Assam
+                    </div>
+                </div>
+                <div class="gallery-item" style="position: relative; border-radius: 10px; overflow: hidden; height: 240px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                    <img src="images/nagaland/dzukou-valley.jpg" alt="Dzükou Valley, Nagaland" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                    <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 0.75rem 1rem; background: linear-gradient(transparent, rgba(10,22,40,0.85)); color: white; font-weight: 600; font-size: 0.95rem;">
+                        Dzükou Valley, Nagaland
+                    </div>
+                </div>
+                <div class="gallery-item" style="position: relative; border-radius: 10px; overflow: hidden; height: 240px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                    <img src="images/manipur/loktak-lake.jpg" alt="Loktak Floating Lake, Manipur" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                    <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 0.75rem 1rem; background: linear-gradient(transparent, rgba(10,22,40,0.85)); color: white; font-weight: 600; font-size: 0.95rem;">
+                        Loktak Floating Lake, Manipur
+                    </div>
+                </div>
+                <div class="gallery-item" style="position: relative; border-radius: 10px; overflow: hidden; height: 240px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                    <img src="images/mizoram/tuirihiau-falls.jpg" alt="Tuirihiau Waterfall, Mizoram" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                    <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 0.75rem 1rem; background: linear-gradient(transparent, rgba(10,22,40,0.85)); color: white; font-weight: 600; font-size: 0.95rem;">
+                        Tuirihiau Falls, Mizoram
+                    </div>
+                </div>
+                <div class="gallery-item" style="position: relative; border-radius: 10px; overflow: hidden; height: 240px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                    <img src="images/tripura/neermahal.jpg" alt="Neermahal Water Palace, Tripura" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                    <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 0.75rem 1rem; background: linear-gradient(transparent, rgba(10,22,40,0.85)); color: white; font-weight: 600; font-size: 0.95rem;">
+                        Neermahal Palace, Tripura
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA / Newsletter -->
+    <section class="cta-section section text-center" style="background-image: linear-gradient(rgba(10, 22, 40, 0.8), rgba(10, 22, 40, 0.8)), url('images/meghalaya/double-decker.jpg'); background-size: cover; background-position: center; color: white;">
+        <div class="container animate-on-scroll">
+            <h2 style="color: white; margin-bottom: 1rem;">Start Your Northeast Adventure Today</h2>
+            <p style="margin-bottom: 2rem;">Subscribe for exclusive deals on Northeast India tours, travel tips, and seasonal guides.</p>
+            <form class="newsletter-form" style="max-width: 500px; margin: 0 auto; display: flex; gap: 10px;">
+                <input type="email" placeholder="Your Email Address" required style="flex: 1; padding: 12px 20px; border: none; border-radius: 30px;">
+                <button type="submit" class="btn btn-primary" style="border-radius: 30px;">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand"><a href="index.html" class="nav-logo"><img src="images/logo.png" alt="GT Travels" class="nav-logo-img" style="height: 52px; max-height: 52px; width: auto; max-width: 160px; object-fit: contain; display: block; margin-bottom: 1rem;"></a>
+                    <p>Creating unforgettable travel experiences across India since 2015. Your trusted partner for personalized journeys, cultural immersion, and adventure.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="packages.html">Tour Packages</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Travel Blog</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Top Destinations</h4>
+                    <ul>
+                        <li><a href="packages.html">Meghalaya</a></li>
+                        <li><a href="packages.html">Sikkim</a></li>
+                        <li><a href="packages.html">Arunachal Pradesh</a></li>
+                        <li><a href="packages.html">Assam</a></li>
+                        <li><a href="packages.html">Nagaland</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i><span>Jail Road, Near Subash Chandra Bose,<br>Shillong, Meghalaya 793001</span></li>
+                        <li><i class="fas fa-phone"></i><span>+91 96129 46960</span></li>
+                        <li><i class="fas fa-envelope"></i><span>gttravels12345@gmail.com</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 GT Travels. All Rights Reserved.</p>
+                <p>Made with <i class="fas fa-heart" style="color: var(--secondary);"></i> in India</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <div class="whatsapp-float">
+        <div class="whatsapp-pulse"></div>
+        <a href="https://wa.me/919612946960?text=Hi! I'm interested in your tour packages." target="_blank">
+            <i class="fab fa-whatsapp"></i>
+            <span>Chat with us</span>
+        </a>
+    </div>
+
+    <!-- Scroll to Top -->
+    <div class="scroll-top" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+<script src="js/forms.js"></script>
+</body>
+</html>

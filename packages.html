@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Northeast India Tour Packages - GT Travels</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css?v=9">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo"><img src="images/logo.png" alt="GT Travels" class="nav-logo-img" style="height: 46px; max-height: 46px; width: auto; max-width: 140px; object-fit: contain; display: block;"></a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="destinations.html">Destinations</a>
+        <a href="packages.html" class="active">Packages</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="nav-cta">
+        <a href="tel:+919612946960" class="nav-phone"><i class="fas fa-phone"></i> +91 96129 46960</a>
+        <a href="contact.html" class="btn btn-primary btn-sm">Book Now</a>
+      </div>
+      <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  
+  <div class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="destinations.html">Destinations</a>
+    <a href="packages.html" class="active">Packages</a>
+    <a href="about.html">About</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn-primary">Book Now</a>
+  </div>
+
+  <!-- Page Hero -->
+  <header class="page-hero" style="background-image: linear-gradient(rgba(10, 22, 40, 0.6), rgba(10, 22, 40, 0.6)), url(images/arunachal/sela-pass.jpg);">
+    <div class="container">
+      <div class="hero-content text-center">
+        <h1>Northeast India Packages</h1>
+        <p class="breadcrumb"><a href="index.html">Home</a> <i class="fas fa-chevron-right" style="font-size: 0.8rem; margin: 0 10px;"></i> Tour Packages</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Filter & Packages Section -->
+  <section class="section packages-section">
+    <div class="container">
+      
+      <!-- Filter Bar -->
+      <div class="filter-bar animate-on-scroll">
+        <div class="filter-row">
+          
+          <div class="filter-group">
+            <i class="fas fa-search"></i>
+            <input type="text" id="filter-search" placeholder="Search Meghalaya, Sikkim, Tawang...">
+          </div>
+          
+          <div class="filter-group">
+            <i class="fas fa-map-marker-alt"></i>
+            <select id="filter-region">
+              <option value="all">All States</option>
+              <option value="meghalaya">Meghalaya</option>
+              <option value="assam">Assam</option>
+              <option value="arunachal">Arunachal Pradesh</option>
+              <option value="sikkim">Sikkim</option>
+              <option value="nagaland">Nagaland</option>
+              <option value="manipur">Manipur</option>
+              <option value="mizoram">Mizoram</option>
+              <option value="tripura">Tripura</option>
+            </select>
+          </div>
+          
+          <div class="filter-group">
+            <i class="fas fa-layer-group"></i>
+            <select id="filter-budget">
+              <option value="all">All Tour Tiers</option>
+              <option value="budget">Standard</option>
+              <option value="mid">Deluxe</option>
+              <option value="luxury">Premium Luxury</option>
+            </select>
+          </div>
+          
+          <div class="filter-group">
+            <i class="far fa-clock"></i>
+            <select id="filter-duration">
+              <option value="all">Any Duration</option>
+              <option value="3-5">3-5 Days</option>
+              <option value="5-7">5-7 Days</option>
+              <option value="7+">7+ Days</option>
+            </select>
+          </div>
+          
+          <div class="filter-group">
+            <i class="fas fa-sort"></i>
+            <select id="filter-sort">
+              <option value="featured">Featured</option>
+              <option value="rating">Top Rated</option>
+              <option value="popular">Most Popular</option>
+            </select>
+          </div>
+          
+        </div>
+        
+        <div class="filter-tags">
+          <button class="filter-tag active" data-type="all">All</button>
+          <button class="filter-tag" data-type="cultural">Cultural</button>
+          <button class="filter-tag" data-type="adventure">Adventure</button>
+          <button class="filter-tag" data-type="wildlife">Wildlife</button>
+        </div>
+      </div>
+      
+      <p id="results-count" class="animate-on-scroll" style="margin-bottom: 30px; font-weight: 500; color: var(--text-light);"></p>
+      
+      <!-- Packages Grid (Populated by JS) -->
+      <div class="packages-grid" id="packages-grid">
+        <!-- Content injected here by packages.js -->
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="cta-banner section animate-on-scroll" style="background-color: var(--primary); color: white; text-align: center; padding: 60px 0;">
+    <div class="container">
+      <h2 style="color: white; margin-bottom: 20px;">Can't find the perfect Northeast adventure?</h2>
+      <p style="margin-bottom: 30px; font-size: 1.1rem;">Let our local experts craft a custom itinerary just for you.</p>
+      <a href="contact.html" class="btn btn-primary" style="background-color: var(--secondary); color: var(--primary);">Contact Us</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="index.html" class="nav-logo"><img src="images/logo.png" alt="GT Travels" class="nav-logo-img" style="height: 52px; max-height: 52px; width: auto; max-width: 160px; object-fit: contain; display: block; margin-bottom: 1rem;"></a>
+          <p>Creating unforgettable travel experiences across India since 2015. Your trusted partner for personalized journeys, cultural immersion, and adventure.</p>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="packages.html">Tour Packages</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="blog.html">Travel Blog</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Top Destinations</h4>
+          <ul>
+            <li><a href="packages.html">Meghalaya</a></li>
+            <li><a href="packages.html">Sikkim</a></li>
+            <li><a href="packages.html">Arunachal Pradesh</a></li>
+            <li><a href="packages.html">Assam</a></li>
+            <li><a href="packages.html">Nagaland</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Contact Info</h4>
+          <ul class="footer-contact">
+            <li><i class="fas fa-map-marker-alt"></i><span>Jail Road, Near Subash Chandra Bose,<br>Shillong, Meghalaya 793001</span></li>
+            <li><i class="fas fa-phone"></i><span>+91 96129 46960</span></li>
+            <li><i class="fas fa-envelope"></i><span>gttravels12345@gmail.com</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 GT Travels. All Rights Reserved.</p>
+        <p>Made with <i class="fas fa-heart" style="color: var(--secondary);"></i> in India</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <div class="whatsapp-float">
+    <div class="whatsapp-pulse"></div>
+    <a href="https://wa.me/919612946960?text=Hi! I'm interested in your tour packages." target="_blank">
+      <i class="fab fa-whatsapp"></i>
+      <span>Chat with us</span>
+    </a>
+  </div>
+
+  <!-- Scroll to Top -->
+  <div class="scroll-top" onclick="scrollToTop()">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <!-- Page Loader -->
+  <div class="page-loader">
+    <div class="loader-spinner"></div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+<script src="js/forms.js"></script>
+  <script src="js/packages.js?v=5"></script>
+</body>
+</html>

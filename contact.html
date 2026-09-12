@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact GT Travels — Northeast India tourism specialists. Plan your dream trip to Meghalaya, Sikkim, Arunachal Pradesh, Assam and more.">
+  <title>Contact Us | GT Travels</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css?v=9">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo"><img src="images/logo.png" alt="GT Travels" class="nav-logo-img" style="height: 46px; max-height: 46px; width: auto; max-width: 140px; object-fit: contain; display: block;"></a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="destinations.html">Destinations</a>
+        <a href="packages.html">Packages</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html" class="active">Contact</a>
+      </div>
+      <div class="nav-cta">
+        <a href="tel:+919612946960" class="nav-phone"><i class="fas fa-phone"></i> +91 96129 46960</a>
+        <a href="contact.html" class="btn btn-primary btn-sm">Book Now</a>
+      </div>
+      <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="destinations.html">Destinations</a>
+    <a href="packages.html">Packages</a>
+    <a href="about.html">About</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn-primary">Book Now</a>
+  </div>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="hero-bg">
+      <img src="images/meghalaya/umiam-lake.jpg" alt="Contact Us - Shillong, Meghalaya">
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="page-hero-content">
+      <h1>Contact Us</h1>
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="separator">/</span>
+        <span>Contact Us</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-label">Get In Touch</span>
+        <h2>We'd Love to Hear From You</h2>
+        <p>Whether you have a question, want to book a trip, or just want to say hello — our team is ready to help.</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Multi-step Inquiry Form -->
+        <div class="multi-step-form animate-on-scroll">
+          <h3 style="margin-bottom: 0.5rem; text-align: center;">Plan Your Dream Trip</h3>
+          <p style="text-align: center; color: var(--text-light); margin-bottom: 2rem; font-size: 0.9rem;">Fill in the details below and our experts will craft the perfect itinerary for you.</p>
+
+          <div class="step-indicators">
+            <div class="step-indicator active">
+              <div class="step-circle">1</div>
+              <span class="step-label">Destination</span>
+            </div>
+            <div class="step-indicator">
+              <div class="step-circle">2</div>
+              <span class="step-label">Travel Details</span>
+            </div>
+            <div class="step-indicator">
+              <div class="step-circle">3</div>
+              <span class="step-label">Personal Info</span>
+            </div>
+            <div class="step-indicator">
+              <div class="step-circle">4</div>
+              <span class="step-label">Confirm</span>
+            </div>
+          </div>
+
+          <!-- Step 1: Destination -->
+          <div class="form-step active">
+            <div class="form-group">
+              <label>Where would you like to go?</label>
+              <select>
+                <option value="">Select a Northeast destination</option>
+                <option value="meghalaya">Meghalaya</option>
+                <option value="sikkim">Sikkim & Darjeeling</option>
+                <option value="arunachal">Arunachal Pradesh</option>
+                <option value="assam">Assam</option>
+                <option value="nagaland">Nagaland</option>
+                <option value="manipur">Manipur</option>
+                <option value="mizoram">Mizoram</option>
+                <option value="tripura">Tripura</option>
+                <option value="multi">Multi-State NE Circuit</option>
+                <option value="other">Other / Not Sure</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>What type of trip are you looking for?</label>
+              <select>
+                <option value="">Select trip type</option>
+                <option value="cultural">Cultural & Heritage</option>
+                <option value="adventure">Adventure & Trekking</option>
+                <option value="beach">Beach & Relaxation</option>
+                <option value="honeymoon">Honeymoon & Romantic</option>
+                <option value="family">Family Vacation</option>
+                <option value="pilgrimage">Pilgrimage & Spiritual</option>
+                <option value="wildlife">Wildlife & Nature</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Tour Preference</label>
+              <select>
+                <option value="">Select package category</option>
+                <option value="standard">Standard / Budget Friendly</option>
+                <option value="deluxe">Deluxe / Comfort</option>
+                <option value="premium">Premium / Luxury</option>
+                <option value="custom">Customized Itinerary</option>
+              </select>
+            </div>
+            <div style="text-align: right; margin-top: 1.5rem;">
+              <button class="btn btn-primary btn-next-step">Next Step <i class="fas fa-arrow-right"></i></button>
+            </div>
+          </div>
+
+          <!-- Step 2: Travel Details -->
+          <div class="form-step">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Travel Start Date</label>
+                <input type="date">
+              </div>
+              <div class="form-group">
+                <label>Travel End Date</label>
+                <input type="date">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Number of Adults</label>
+                <select>
+                  <option value="1">1 Adult</option>
+                  <option value="2" selected>2 Adults</option>
+                  <option value="3">3 Adults</option>
+                  <option value="4">4 Adults</option>
+                  <option value="5">5 Adults</option>
+                  <option value="6+">6+ Adults</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Number of Children</label>
+                <select>
+                  <option value="0" selected>No Children</option>
+                  <option value="1">1 Child</option>
+                  <option value="2">2 Children</option>
+                  <option value="3">3 Children</option>
+                  <option value="4+">4+ Children</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Accommodation Preference</label>
+              <select>
+                <option value="">Select preference</option>
+                <option value="budget">Budget (2-3 Star)</option>
+                <option value="mid">Mid-Range (3-4 Star)</option>
+                <option value="luxury">Luxury (4-5 Star)</option>
+                <option value="heritage">Heritage Properties</option>
+                <option value="homestay">Homestays & Boutique</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Special Requirements (optional)</label>
+              <textarea placeholder="Any dietary requirements, accessibility needs, special occasions, or specific places you want to visit..."></textarea>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-top: 1.5rem;">
+              <button class="btn btn-outline btn-prev-step"><i class="fas fa-arrow-left"></i> Previous</button>
+              <button class="btn btn-primary btn-next-step">Next Step <i class="fas fa-arrow-right"></i></button>
+            </div>
+          </div>
+
+          <!-- Step 3: Personal Info -->
+          <div class="form-step">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Full Name *</label>
+                <input type="text" placeholder="Your full name" required>
+              </div>
+              <div class="form-group">
+                <label>Phone Number *</label>
+                <input type="tel" placeholder="+91 XXXXX XXXXX" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Email Address *</label>
+              <input type="email" placeholder="your@email.com" required>
+            </div>
+            <div class="form-group">
+              <label>City</label>
+              <input type="text" placeholder="Your city">
+            </div>
+            <div class="form-group">
+              <label>How did you hear about us?</label>
+              <select>
+                <option value="">Select</option>
+                <option value="google">Google Search</option>
+                <option value="social">Social Media</option>
+                <option value="friend">Friend / Family</option>
+                <option value="blog">Blog / Article</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-top: 1.5rem;">
+              <button class="btn btn-outline btn-prev-step"><i class="fas fa-arrow-left"></i> Previous</button>
+              <button class="btn btn-primary btn-next-step">Review & Submit <i class="fas fa-arrow-right"></i></button>
+            </div>
+          </div>
+
+          <!-- Step 4: Confirmation -->
+          <div class="form-step">
+            <div style="text-align: center; padding: 2rem 0;">
+              <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--secondary), var(--secondary-light)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+                <i class="fas fa-paper-plane" style="font-size: 2rem; color: var(--primary);"></i>
+              </div>
+              <h3>Ready to Submit?</h3>
+              <p style="color: var(--text-light); max-width: 400px; margin: 0.5rem auto 2rem;">Our travel experts will review your request and get back to you within 24 hours with a personalized itinerary!</p>
+              <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                <button class="btn btn-outline btn-prev-step"><i class="fas fa-arrow-left"></i> Go Back</button>
+                <button class="btn btn-primary btn-lg" onclick="alert('Thank you! 🎉 Your inquiry has been submitted. Our team will contact you within 24 hours.'); location.reload();">
+                  <i class="fas fa-check"></i> Submit Inquiry
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Information Cards -->
+        <div class="contact-info-cards animate-on-scroll">
+          <div class="contact-info-card">
+            <i class="fas fa-phone"></i>
+            <div>
+              <h4>Call Us</h4>
+              <p>+91 96129 46960<br>+91 82599 27756</p>
+              <p style="font-size: 0.8rem; margin-top: 0.25rem;">Mon - Sat, 9:00 AM - 7:00 PM</p>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h4>Email Us</h4>
+              <p>gttravels12345@gmail.com</p>
+              <p style="font-size: 0.8rem; margin-top: 0.25rem;">We reply within 24 hours</p>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h4>Visit Our Office</h4>
+              <p>Jail Road, Near Subash Chandra Bose,<br>Shillong, Meghalaya 793001</p>
+              <p style="font-size: 0.8rem; margin-top: 0.25rem;">Open Mon - Sat, 10 AM - 6 PM</p>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <i class="fab fa-whatsapp"></i>
+            <div>
+              <h4>WhatsApp</h4>
+              <p>+91 96129 46960</p>
+              <p style="font-size: 0.8rem; margin-top: 0.25rem;">Quick replies, anytime!</p>
+              <a href="https://wa.me/919612946960" target="_blank" class="btn btn-sm btn-primary" style="margin-top: 0.75rem;">
+                <i class="fab fa-whatsapp"></i> Chat Now
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Contact Form -->
+          <div style="background: var(--bg-white); border-radius: var(--radius-md); padding: 1.5rem; box-shadow: var(--shadow-sm); border: 1px solid rgba(0,0,0,0.04);">
+            <h4 style="margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+              <i class="fas fa-comment-dots" style="color: var(--secondary);"></i> Quick Message
+            </h4>
+            <form id="contact-form">
+              <div class="form-group">
+                <input type="text" placeholder="Your Name" required>
+              </div>
+              <div class="form-group">
+                <input type="email" placeholder="Your Email" required>
+              </div>
+              <div class="form-group">
+                <textarea placeholder="Your message..." style="min-height: 100px;"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                <i class="fas fa-paper-plane"></i> Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-label">Find Us</span>
+        <h2>Our Location</h2>
+        <p>Visit our office in Shillong for a personalized travel consultation.</p>
+      </div>
+      <div class="map-wrapper animate-on-scroll">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3598.5!2d91.8826!3d25.5788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3750000000000000%3A0x0!2sJail%20Road%2C%20Shillong%2C%20Meghalaya%20793001!5e0!3m2!1sen!2sin!4v1635000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="section-label">FAQ</span>
+        <h2>Frequently Asked Questions</h2>
+        <p>Find answers to common questions about booking, payments, and travel with us.</p>
+      </div>
+
+      <div style="max-width: 800px; margin: 0 auto;" class="animate-on-scroll">
+        <div class="faq-item">
+          <button class="faq-question">
+            How do I book a tour package?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              You can book a tour package by filling out the inquiry form above, calling us directly at +91 96129 46960, or sending us a WhatsApp message. Our travel experts will get back to you within 24 hours with a customized itinerary and quote.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What is your cancellation policy?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Cancellations made 30+ days before departure receive a full refund minus processing fees. 15-30 days: 50% refund. Less than 15 days: no refund. We recommend purchasing travel insurance for added protection.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Can I customize a tour package?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Absolutely! All our packages are fully customizable. You can modify the itinerary, accommodation, duration, and activities based on your preferences. Just let us know your requirements and we'll create a tailor-made experience.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What payment methods do you accept?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              We accept bank transfers (NEFT/RTGS/IMPS), credit/debit cards, UPI payments, and EMI options through select banks. A 30% advance is required to confirm your booking, with the remaining balance due 15 days before departure.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Do you provide travel insurance?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              While travel insurance is not included in our standard packages, we highly recommend it and can help you purchase a comprehensive travel insurance policy through our partner providers at competitive rates.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What happens in case of bad weather or natural disruptions?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              In case of weather-related disruptions, our on-ground team will rearrange your itinerary with alternative activities or extend your stay as needed. We prioritize your safety and comfort above all else. Our 24/7 support team is always available to assist.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="index.html" class="nav-logo"><img src="images/logo.png" alt="GT Travels" class="nav-logo-img" style="height: 52px; max-height: 52px; width: auto; max-width: 160px; object-fit: contain; display: block; margin-bottom: 1rem;"></a>
+          <p>Northeast India tourism specialists since 2016. Your trusted partner for exploring Meghalaya, Sikkim, Arunachal Pradesh, Assam, and all seven sisters of the Northeast.</p>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="packages.html">Tour Packages</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="blog.html">Travel Blog</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Top Destinations</h4>
+          <ul>
+            <li><a href="packages.html">Meghalaya</a></li>
+            <li><a href="packages.html">Sikkim</a></li>
+            <li><a href="packages.html">Arunachal Pradesh</a></li>
+            <li><a href="packages.html">Assam</a></li>
+            <li><a href="packages.html">Nagaland</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Contact Info</h4>
+          <ul class="footer-contact">
+            <li><i class="fas fa-map-marker-alt"></i><span>Jail Road, Near Subash Chandra Bose,<br>Shillong, Meghalaya 793001</span></li>
+            <li><i class="fas fa-phone"></i><span>+91 96129 46960</span></li>
+            <li><i class="fas fa-envelope"></i><span>gttravels12345@gmail.com</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 GT Travels. All Rights Reserved.</p>
+        <p>Made with <i class="fas fa-heart" style="color: var(--secondary);"></i> in India</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <div class="whatsapp-float">
+    <div class="whatsapp-pulse"></div>
+    <a href="https://wa.me/919612946960?text=Hi! I'm interested in your Northeast India tour packages." target="_blank">
+      <i class="fab fa-whatsapp"></i>
+      <span>Chat with us</span>
+    </a>
+  </div>
+
+  <!-- Scroll to Top -->
+  <div class="scroll-top" onclick="scrollToTop()">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <!-- Page Loader -->
+  <div class="page-loader">
+    <div class="loader-spinner"></div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+<script src="js/forms.js"></script>
+</body>
+</html>
